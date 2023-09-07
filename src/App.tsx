@@ -20,7 +20,7 @@ export const App = () => {
 		<ThemeProvider theme={theme}>
 			<GlobalStyle />
 			<ThemeUpdateContext.Provider value={{ theme, setTheme }}>
-				<BrowserRouter>
+				<BrowserRouter basename="/redis">
 					<Routes>
 						<Route path={Pages.notFound} element={<PageNotFound />} />
 						<Route path={Pages.login} element={<PageLogin />} />
