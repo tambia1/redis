@@ -6,7 +6,7 @@ import path from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-	base: process.env.NODE_ENV === "production" ? "/redis" : "/",
+	base: process.env.NODE_ENV === "production" ? "/redis" : "/redis",
 
 	plugins: [
 		react({
