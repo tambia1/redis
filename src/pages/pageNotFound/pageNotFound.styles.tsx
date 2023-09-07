@@ -39,3 +39,7 @@ export const Title = styled.div`
 	color: ${({ theme }) => theme.colors.primary};
 	font-size: ${({ theme }) => theme.fontSizes.large};
 `;
+
+export const Version = styled.div`
+	margin: 1rem;
+`;
