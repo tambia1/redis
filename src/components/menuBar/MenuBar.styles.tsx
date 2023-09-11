@@ -1,3 +1,4 @@
+import { ITheme } from "@src/themes/Theme.types";
 import styled from "styled-components";
 
 export const MenuBarContainer = styled.div`
