@@ -1,13 +1,13 @@
-import { useThemes } from "@src/hooks/UseThemes";
-import { Theme, ThemeName, themes } from "@src/themes/Theme.types";
+import { ITheme, ThemeName, themes } from "@src/themes/Theme.types";
 import { Container } from "./ScreenThemes.styles";
+import { useTheme } from "@src/components/theme/hooks/UseTheme";
 
 export interface Props {}
 
 export const ScreenThemes = (props: Props) => {
-	const { theme, setTheme } = useThemes();
+	const { theme, setTheme } = useTheme();
 
-	const onChangeTheme = (theme: Theme) => {
+	const onChangeTheme = (theme: ITheme) => {
 		setTheme(theme);
 	};
 

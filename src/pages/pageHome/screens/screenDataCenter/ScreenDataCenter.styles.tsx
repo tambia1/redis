@@ -1,4 +1,5 @@
 import { AnimationShowFrames } from "@src/styles/globalStyles";
+import { ITheme } from "@src/themes/Theme.types";
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
@@ -20,13 +21,13 @@ export const WorldMapContainer = styled.div`
 `;
 
 export const Title = styled.div`
-	color: ${({ theme }) => theme.colors.primary};
-	font-size: ${({ theme }) => theme.fontSizes.large};
+	color: ${({ theme }: { theme: ITheme }) => theme.color.onBackground};
+	font-size: ${({ theme }: { theme: ITheme }) => theme.size.m};
 `;
 
 export const Cost = styled.div`
-	color: ${({ theme }) => theme.colors.primary};
-	font-size: ${({ theme }) => theme.fontSizes.large};
+	color: ${({ theme }: { theme: ITheme }) => theme.color.onBackground};
+	font-size: ${({ theme }: { theme: ITheme }) => theme.size.m};
 	font-weight: bold;
 `;
 
@@ -35,7 +36,7 @@ export const WorldMap = styled.div`
 	width: 700px;
 	height: 300px;
 
-	background-image: url(${({ theme }) => theme.images.map});
+	background-image: url(${({ theme }: { theme: ITheme }) => theme.images.map});
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 `;
@@ -47,7 +48,7 @@ export const WorldMapPin = styled.div<{ $isSelected: boolean }>`
 	text-align: center;
 	width: 100%;
 	height: 100%;
-	border: solid 0.2rem ${({ theme, $isSelected }) => ($isSelected ? theme.colors.primary : theme.colors.primary)};
+	border: solid 0.2rem ${({ theme, $isSelected }: { theme: ITheme; $isSelected: boolean }) => ($isSelected ? theme.color.primary : theme.color.secondary)};
 	border-radius: 100%;
 	background: linear-gradient(-45deg, #03e5b7 0%, #037ade 100%);
 	font-size: 0%;
@@ -99,12 +100,12 @@ export const PlanName = styled.span``;
 export const PlanPrice = styled.span<{ $isEnabled: boolean }>`
 	font-weight: bold;
 	font-style: italic;
-	color: ${({ $isEnabled }) => ($isEnabled ? "lightgreen" : "#999999")};
+	color: ${({ theme, $isEnabled }: { theme: ITheme; $isEnabled: boolean }) => ($isEnabled ? theme.color.success : theme.color.onSecondary)};
 `;
 
 export const Plan = styled.div<{ $isEnabled: boolean }>`
 	transition: all 0.3s ease;
-	color: ${({ $isEnabled }) => ($isEnabled ? "#ffffff" : "#999999")};
+	color: ${({ theme, $isEnabled }: { theme: ITheme; $isEnabled: boolean }) => ($isEnabled ? theme.color.onBackground : theme.color.onSecondary)};
 `;
 
 export const Tips = styled.div`
@@ -114,7 +115,7 @@ export const Tips = styled.div`
 `;
 
 export const Tip = styled.div`
-	color: #ffffff;
+	color: ${({ theme }: { theme: ITheme }) => theme.color.onBackground};
 	white-space: pre-wrap;
 	animation: ${AnimationShowFrames} 0.3s ease-in 0s 1 normal both running;
 `;

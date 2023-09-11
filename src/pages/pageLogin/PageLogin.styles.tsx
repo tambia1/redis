@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import imageBoxLeftBg from "./assets/login_bg.svg";
 import imageRedis from "./assets/redis_icon.png";
+import { ITheme } from "@src/themes/Theme.types";
 
 export const Container = styled.div`
 	width: 100%;
@@ -16,7 +17,7 @@ export const Box = styled.div`
 	width: 600px;
 	height: 400px;
 	box-sizing: border-box;
-	color: ${({ theme }) => theme.colors.primary};
+	color: ${({ theme }: { theme: ITheme }) => theme.color.onBackground};
 
 	display: flex;
 	flex-direction: row;
@@ -52,15 +53,15 @@ export const Text = styled.div`
 	display: inline-flex;
 	padding-bottom: 6px;
 	align-self: flex-start;
-	color: ${({ theme }) => theme.colors.primary};
-	font-size: ${({ theme }) => theme.fontSizes.medium};
+	color: ${({ theme }: { theme: ITheme }) => theme.color.onBackground};
+	font-size: ${({ theme }: { theme: ITheme }) => theme.size.m};
 `;
 
 export const Title = styled.div`
 	display: inline-flex;
 	padding-bottom: 6px;
-	color: ${({ theme }) => theme.colors.primary};
-	font-size: ${({ theme }) => theme.fontSizes.large};
+	color: ${({ theme }: { theme: ITheme }) => theme.color.onBackground};
+	font-size: ${({ theme }: { theme: ITheme }) => theme.size.m};
 `;
 
 export const Icon = styled.div`

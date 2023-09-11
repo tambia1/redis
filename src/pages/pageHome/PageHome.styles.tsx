@@ -1,13 +1,13 @@
 import { Button } from "@src/components/button/Button";
-import { Theme } from "@src/themes/Theme.types";
+import { ITheme } from "@src/themes/Theme.types";
 import styled from "styled-components";
 
-export const PageContainer = styled.div<{ theme: Theme }>`
+export const PageContainer = styled.div<{ theme: ITheme }>`
 	display: flex;
 	width: 100%;
 	height: 100%;
 
-	background-image: ${({ theme }) => `url("${theme.images.mainBackground}")`};
+	background-image: ${({ theme }: { theme: ITheme }) => `url("${theme.images.mainBackground}")`};
 	background-size: cover;
 `;
 
@@ -27,7 +27,7 @@ export const ScreenContainer = styled.div`
 	width: 100%;
 	height: 100%;
 
-	color: ${({ theme }) => theme.colors.primary};
+	color: ${({ theme }: { theme: ITheme }) => theme.color.onBackground};
 `;
 
 export const ButtonCollapse = styled(Button)<{ $isCollapsed: boolean }>`

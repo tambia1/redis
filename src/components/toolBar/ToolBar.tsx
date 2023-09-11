@@ -11,8 +11,8 @@ const Container = styled.div`
 	height: 50px;
 	left: 0px;
 	box-sizing: border-box;
-	color: ${({ theme }) => theme.colors.primary};
-	background-color: ${({ theme }) => theme.backgroundColors.primary};
+	color: ${({ theme }: { theme: ITheme }) => theme.color.onBackground};
+	background-color: ${({ theme }: { theme: ITheme }) => theme.color.background};
 `;
 
 const Item = styled.div`

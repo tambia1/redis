@@ -7,6 +7,7 @@ import imageServerDark from "./assets/server-dark.png";
 import imageServerLight from "./assets/server-light.png";
 import imageThemeDark from "./assets/theme-dark.png";
 import imageThemeLight from "./assets/theme-light.png";
+import { ITheme } from "@src/themes/Theme.types";
 
 export const imageCommon = css`
 	display: inline-flex;
@@ -20,27 +21,27 @@ export const imageCommon = css`
 	background-size: 80%;
 	background-position: 50% 50%;
 	border-radius: 0.5rem;
-	background-color: ${({ theme }) => theme.backgroundColors.tertiary};
+	background-color: ${({ theme }: { theme: ITheme }) => theme.color.primary};
 `;
 
 export const ImageServer = styled.div`
 	${imageCommon}
-	background-image: url(${({ theme }) => (theme.themeName === "themeLight" ? imageServerLight : imageServerDark)});
+	background-image: url(${({ theme }: { theme: ITheme }) => (theme.themeName === "light" ? imageServerLight : imageServerDark)});
 `;
 
 export const ImageTheme = styled.div`
 	${imageCommon}
-	background-image: url(${({ theme }) => (theme.themeName === "themeLight" ? imageThemeLight : imageThemeDark)});
+	background-image: url(${({ theme }: { theme: ITheme }) => (theme.themeName === "light" ? imageThemeLight : imageThemeDark)});
 `;
 
 export const ImageAbout = styled.div`
 	${imageCommon}
-	background-image: url(${({ theme }) => (theme.themeName === "themeLight" ? imageAboutLight : imageAboutDark)});
+	background-image: url(${({ theme }: { theme: ITheme }) => (theme.themeName === "light" ? imageAboutLight : imageAboutDark)});
 `;
 
 export const ImageLogout = styled.div`
 	${imageCommon}
-	background-image: url(${({ theme }) => (theme.themeName === "themeLight" ? imageLogoutLight : imageLogoutDark)});
+	background-image: url(${({ theme }: { theme: ITheme }) => (theme.themeName === "light" ? imageLogoutLight : imageLogoutDark)});
 `;
 
 export const Text = styled.div`

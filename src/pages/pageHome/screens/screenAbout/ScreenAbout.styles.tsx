@@ -1,3 +1,4 @@
+import { ITheme } from "@src/themes/Theme.types";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -6,11 +7,11 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.div`
-	color: ${({ theme }) => theme.colors.primary};
-	font-size: ${({ theme }) => theme.fontSizes.large};
+	color: ${({ theme }: { theme: ITheme }) => theme.color.onBackground};
+	font-size: ${({ theme }: { theme: ITheme }) => theme.size.m};
 `;
 
 export const SubTitle = styled.div`
-	color: ${({ theme }) => theme.colors.primary};
-	font-size: ${({ theme }) => theme.fontSizes.medium};
+	color: ${({ theme }: { theme: ITheme }) => theme.color.onBackground};
+	font-size: ${({ theme }: { theme: ITheme }) => theme.size.m};
 `;

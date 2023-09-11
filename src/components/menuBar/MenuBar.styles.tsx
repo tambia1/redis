@@ -13,8 +13,8 @@ export const MenuBarContainer = styled.div`
 	position: relative;
 
 	box-sizing: border-box;
-	color: ${({ theme }) => theme.colors.primary};
-	background-color: ${({ theme }) => theme.backgroundColors.primary};
+	color: ${({ theme }: { theme: ITheme }) => theme.color.onBackground};
+	background-color: ${({ theme }: { theme: ITheme }) => theme.color.background};
 
 	transition: all ease-out 0.3s;
 `;
