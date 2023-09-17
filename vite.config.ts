@@ -4,6 +4,7 @@
 import react from "@vitejs/plugin-react";
 import path from "path";
 import { defineConfig } from "vite";
+import checker from "vite-plugin-checker";
 
 export default defineConfig({
 	base: "/redis",
@@ -21,6 +22,9 @@ export default defineConfig({
 					],
 				],
 			},
+		}),
+		checker({
+			typescript: true,
 		}),
 	],
 

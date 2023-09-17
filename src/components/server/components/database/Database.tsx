@@ -45,7 +45,7 @@ export const Database = ({ className, name, title, text, memorySize, slot, onCli
 				<S.IconDelete iconName="minusCircle" onClick={onClickDelete} />
 				<S.Title>{title}</S.Title>
 				<S.IconType iconName={typeImages[slot]} />
-				<S.IconRight iconName="imageRight" onClick={onClickDisconnect} />
+				<S.IconRight iconName="right" onClick={onClickDisconnect} />
 				<S.Text>{text}</S.Text>
 			</S.ContainerTitle>
 
