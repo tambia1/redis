@@ -1,8 +1,8 @@
-import { IconsName } from "@src/components/icon/Icon.styles";
 import { ISlot } from "@src/data/data";
 import { ReactNode } from "react";
 import { Memory } from "../memory/Memory";
 import * as S from "./Database.styles";
+import { IconsName } from "@src/components/icon/Icon.types";
 
 interface Props {
 	className?: string | undefined;
