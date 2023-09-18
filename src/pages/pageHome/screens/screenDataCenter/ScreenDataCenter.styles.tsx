@@ -100,12 +100,12 @@ export const PlanName = styled.span``;
 export const PlanPrice = styled.span<{ $isEnabled: boolean }>`
 	font-weight: bold;
 	font-style: italic;
-	color: ${({ theme, $isEnabled }: { theme: ITheme; $isEnabled: boolean }) => ($isEnabled ? theme.color.success : theme.color.onSecondary)};
+	color: ${({ theme, $isEnabled }: { theme: ITheme; $isEnabled: boolean }) => ($isEnabled ? theme.color.success : theme.color.error)};
 `;
 
 export const Plan = styled.div<{ $isEnabled: boolean }>`
 	transition: all 0.3s ease;
-	color: ${({ theme, $isEnabled }: { theme: ITheme; $isEnabled: boolean }) => ($isEnabled ? theme.color.onBackground : theme.color.onSecondary)};
+	color: ${({ theme, $isEnabled }: { theme: ITheme; $isEnabled: boolean }) => ($isEnabled ? theme.color.onBackground : theme.color.secondary)};
 `;
 
 export const Tips = styled.div`
