@@ -1,7 +1,6 @@
-import { Box } from "@src/components/box/Box";
+import { Box } from "@src/pages/pageHome/screens/screenDataCenter/components/box/Box";
 import { Canvas, drawArc, drawCircles, drawLines } from "@src/components/canvas/Canvas";
-import { Server } from "@src/components/server/Server";
-import { WorldMap, getWorldMapXY } from "@src/components/worldMap/WorldMap";
+import { WorldMap, getWorldMapXY } from "./components/worldMap/WorldMap";
 import { IDatabase, IServer, ISlot, servers as serversData } from "@src/data/data";
 import { ILocation, Locations } from "@src/data/locations";
 import { Flex } from "@src/styles/globalStyles";
@@ -18,6 +17,7 @@ import Disk from "./assets/harddisk.png";
 import Primary from "./assets/ram_primary.png";
 import Replica from "./assets/ram_replica.png";
 import IconServer from "./assets/server.png";
+import { Server } from "./components/server/Server";
 
 interface Props {}
 

@@ -1,12 +1,12 @@
 import { Pages } from "@pages/Pages.types";
 import { Button } from "@src/components/button/Button";
-import { MenuBar } from "@src/components/menuBar/MenuBar";
-import { MenuBarItem } from "@src/components/menuBarItem/MenuBarItem";
+import { MenuBar } from "@src/pages/pageHome/components/pageMenu/components/menuBar/MenuBar";
 import { Modal } from "@src/components/modal/Modal";
 import { content } from "@src/locale/en";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as S from "./PageMenu.styles";
+import { MenuBarItem } from "./components/menuBarItem/MenuBarItem";
 
 export type ItemType = "dataCenter" | "themes" | "about" | "logout";
 

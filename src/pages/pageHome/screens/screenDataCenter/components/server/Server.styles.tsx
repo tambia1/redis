@@ -1,5 +1,5 @@
+import { Icon } from "@src/components/icon/Icon";
 import styled from "styled-components";
-import { Icon } from "../icon/Icon";
 
 export const Server = styled.div`
 	width: auto;
