@@ -8,9 +8,9 @@ import { Theme } from "./components/theme/Theme";
 
 export const App = () => {
 	return (
-		<Theme>
+		<BrowserRouter basename="/redis">
 			<GlobalStyle />
-			<BrowserRouter basename="/redis">
+			<Theme>
 				<Routes>
 					<Route path={Pages.notFound} element={<PageNotFound />} />
 					<Route path={Pages.login} element={<PageLogin />} />
@@ -18,7 +18,7 @@ export const App = () => {
 					<Route path={Pages.home.themes} element={<PageHome pageKey={Pages.home.themes} />} />
 					<Route path={Pages.home.about} element={<PageHome pageKey={Pages.home.about} />} />
 				</Routes>
-			</BrowserRouter>
-		</Theme>
+			</Theme>
+		</BrowserRouter>
 	);
 };
